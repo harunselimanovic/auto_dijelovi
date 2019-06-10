@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admin`
+--
+
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES (1,'admin','admin'),(5,'demo','demo');
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `dijelovi`
 --
 
@@ -29,7 +54,7 @@ CREATE TABLE `dijelovi` (
   `kategorija` varchar(40) NOT NULL,
   `slika` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +63,7 @@ CREATE TABLE `dijelovi` (
 
 LOCK TABLES `dijelovi` WRITE;
 /*!40000 ALTER TABLE `dijelovi` DISABLE KEYS */;
-INSERT INTO `dijelovi` VALUES (1,'Svjecice',30,'Karoserija','svjecice.jpg'),(2,'Filter Goriva',50,'Karoserija',''),(3,'Amortizeri',150,'Motor',''),(4,'Branik',100,'Motor','');
+INSERT INTO `dijelovi` VALUES (1,'Svjecice',30,'Karoserija','svjecice.jpg'),(2,'Filter Goriva',50,'Karoserija',''),(3,'Amortizeri',150,'Motor',''),(4,'Branik',100,'Motor',''),(5,'test',1231,'dio','dio.jpg'),(35,'slika',213,'sss','');
 /*!40000 ALTER TABLE `dijelovi` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-02 12:46:57
+-- Dump completed on 2019-06-10 19:10:14
