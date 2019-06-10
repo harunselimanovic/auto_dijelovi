@@ -8,6 +8,12 @@ background: rgba(245, 245, 245, 0.45);
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
 .row.header{
   width: auto;
   background: rgba(245, 245, 245, 0.45);
@@ -55,9 +61,7 @@ hr {
 	background-color:#e78200;
 }
 .Registracija {
-  border: 0;;
-  background: #e78200;
-  display: inline-block;
+  border: 0;
   margin: 0;
   padding:10px;
 }
@@ -182,4 +186,24 @@ input[type="file"] {
 
 .form-container.mystyle  {
   display: block;
+}
+
+.nav-link {
+  float: left;
+  margin-right: 20px;
+}
+
+.artikal {
+  width: 33.3333%;
+  padding: 20px;
+  float: left;
+}
+
+.artikal-box {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.lista-artikala {
+  float: left;
 }

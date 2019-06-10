@@ -1,3 +1,7 @@
+<?php
+include('header.html');
+?>
+
 <fieldset class="Registracija">
     <form action="admin.php" method="post">
         <tr>
@@ -13,3 +17,7 @@
         </tr>
     </form>
 </fieldset>
+
+<?php
+include('footer.html');
+?>

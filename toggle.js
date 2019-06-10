@@ -1,7 +1,7 @@
 function myFunction1(){
     var element1 = document.getElementById("forma1");
     var element2 = document.getElementById("forma2");
-    var element2 = document.getElementById("forma3");
+    var element3 = document.getElementById("forma3");
     element1.classList.toggle("mystyle");
     element2.classList.remove("mystyle");
     element3.classList.remove("mystyle");

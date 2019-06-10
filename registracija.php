@@ -26,3 +26,7 @@ if(isset($_POST['registracija']) && $registracija) {
         <td colspan="2" text-align="center"><input type="submit" value="Registruj se" name="registracija"/></td>
     </tr>
 </form>
+
+<?php
+include('footer.html');
+?>
