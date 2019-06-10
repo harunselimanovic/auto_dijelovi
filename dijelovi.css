@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgba(243, 243, 243, 0.45);
+}
+
+body {
+    max-width: 1260px;
+}
+
+.rezultati {
+    width: 50%;
+    float: right;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.pretrazna-forma {
+    color: blueviolet;
+    width: 50%;
+    float: left;
+}
+
+.pretrazna-forma input {
+    height: 40px;
+    background: wheat;
+    width: 70%;
+}
+
+.pretrazna-forma input[type="submit"] {
+    background: yellow;
+    color: red;
+    width: 50%;
+}
+
+.pretrazna-forma label {
+    display: inline-block;
+    width: 30%;
+}
+
+.slike {
+    width: 100%;
+    float: right;
+}
