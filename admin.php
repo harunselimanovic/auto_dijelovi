@@ -60,34 +60,27 @@ if ($postoji && isset($_POST['prijava'])) {
 <div class="row">
 Dobro dosli
 
-    <ul>
-        <li>
-            <a href="#">Dodaj</a>
-            <form method="post" enctype="multipart/form-data">
-                <tr>
-                    <td>Ime:</td>
-                    <td><input type="text" name="auto_dio"/></td>
-                </tr>
-                <tr>
-                    <td>Cijena:</td>
-                    <td><input type="number" name="cijena"/></td>
-                </tr>
-                <tr>
-                    <td>Kategorija:</td>
-                    <td><input type="text" name="kategorija"/></td>
-                </tr>
-
-                <tr>
-                    <td>Slika:</td>
-                    <td><input type="file" name="slika"/></td>
-                </tr>
-
-                <tr>
-                    <td colspan="2" text-align="center"><input type="submit" value="Dodaj" name="dodaj"/></td>
-                </tr>
+    <ul class="lista-komandi">
+        <li id="komanda1" class="komanda komanda-dodaj">
+            <a href="#" onclick="myFunction1()">Dodaj</a>
+            <div id="forma1" class="form-container">
+            <form method="post" enctyp="multipart/form-data">
+                
+                Ime: <input type="text" name="auto_dio"/>
+                
+                Cijena: <input type="number" name="cijena"/>
+                
+                Kategorija: <input type="text" name="kategorija"/>
+                
+                <p class="unos-slike">Slika: <input type="file" name="slika"/></p>
+                
+                <input type="submit" class="unos-artikla" value="Dodaj" name="dodaj"/>
+                
             </form>
+        </div>
         </li>
-        <li>Azuriraj
+        <li id="komanda2" class="komanda komanda-azuriraj"><a href="#" onclick="myFunction2()">Azuriraj</a>
+        <div id="forma2" class="form-container">
         <?php
         $upit_azuriraj = "Select * from dijelovi";
         $dijelovi = mysqli_query($konekcija, $upit_azuriraj);
@@ -105,8 +98,10 @@ Dobro dosli
             <?php
         }
         ?>
+        </div>
         </li>
-        <li>Obrisi
+        <li id="komanda3"  class="komanda komanda-obrisi"><a  onclick="myFunction3()" href="#">Obrisi</a>
+        <div id="forma3" class="form-container">
             <?php
             $upit_azuriraj = "Select * from dijelovi";
             $dijelovi = mysqli_query($konekcija, $upit_azuriraj);
@@ -114,16 +109,17 @@ Dobro dosli
             foreach ($dijelovi as $dio) {
                 ?>
                 <form action="" method="post">
-                    <input type="text" value="<?php echo $dio['ime']; ?>" name="novo_ime">
-                    <input type="text" value="<?php echo $dio['kategorija']; ?>" name="kategorija">
-                    <input type="text" value="<?php echo $dio['cijena']; ?>" name="cijena">
-                    <input type="text" value="<?php echo $dio['slika']; ?>" name="slika">
-                    <input type="hidden" value="<?php echo $dio['id']; ?>" name="id">
+                    <span class="za-brisanje"><?php echo $dio['ime']; ?></span>
+                    <span class="za-brisanje"><?php echo $dio['kategorija']; ?></span>
+                    <span class="za-brisanje"><?php echo $dio['cijena']; ?></span>
+                    <span class="za-brisanje"><?php echo $dio['slika']; ?></span>
+                    <span class="za-brisanje"><?php echo $dio['id']; ?></span>
                     <input type="submit" value="Izbrisi" name="obrisi"/>
                 </form>
                 <?php
             }
             ?>
+            </div>
         </li>
     </ul>
 </div>
