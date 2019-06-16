@@ -219,4 +219,9 @@ input[type="file"] {
 
 .lista-artikala {
   float: left;
+  width:100%;
+}
+
+.about-us {
+  padding-right: 40%;
 }
