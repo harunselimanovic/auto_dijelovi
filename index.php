@@ -1,7 +1,9 @@
 <?php
 include('header.html');
 ?>
-
+<?php 
+include('baner.html');
+?>
 <div class="row">
 
     <div class="sadrzaj">
